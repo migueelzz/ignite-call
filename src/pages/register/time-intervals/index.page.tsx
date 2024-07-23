@@ -21,6 +21,8 @@ import { z } from 'zod'
 import { getWeekDays } from '../../../utils/get-week-days'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { convertTimeStringtoMinutes } from '../../../utils/convert-time-string-to-minutes'
+import { api } from '../../../lib/axios'
+import { useRouter } from 'next/router'
 
 const timeIntervalsTimeSchema = z.object({
   intervals: z
@@ -65,6 +67,8 @@ type TimeIntervalsFormInput = z.input<typeof timeIntervalsTimeSchema>
 type TimeIntervalsFormOutput = z.output<typeof timeIntervalsTimeSchema>
 
 export default function TimeIntervals() {
+  const router = useRouter()
+
   const {
     register,
     control,
@@ -96,7 +100,13 @@ export default function TimeIntervals() {
   const intervals = watch('intervals')
 
   async function handleSetTimeIntervals(data: TimeIntervalsFormOutput) {
-    console.log(data)
+    const { intervals } = data
+
+    await api.post('/users/time-intervals', {
+      intervals,
+    })
+
+    await router.push('/register/update-profile')
   }
 
   return (
@@ -135,6 +145,9 @@ export default function TimeIntervals() {
                 </IntervalDay>
                 <IntervalInputs>
                   <TextInput
+                    crossOrigin={undefined}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
                     size="sm"
                     type="time"
                     step={60}
@@ -142,6 +155,9 @@ export default function TimeIntervals() {
                     {...register(`intervals.${index}.startTime`)}
                   />
                   <TextInput
+                    crossOrigin={undefined}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
                     size="sm"
                     type="time"
                     step={60}
