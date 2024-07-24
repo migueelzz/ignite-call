@@ -34,6 +34,22 @@ export const TimePicker = styled('div', {
   bottom: 0,
   right: 0,
   width: 280,
+
+  /* Hide scrollbar for Chrome */
+  '&::-webkit-scrollbar': {
+    display: 'none',
+  },
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  scrollbarWidth: 'none',
+  '-ms-overflow-style': 'none',
+
+  '@media(max-width: 900px)': {
+    position: 'relative',
+    width: '100%',
+    borderTop: '1px solid $gray600',
+    borderLeft: 'none',
+  },
 })
 
 export const TimePickerHeader = styled(Text, {
