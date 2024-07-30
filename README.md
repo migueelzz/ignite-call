@@ -1,6 +1,7 @@
 <div align="center">
-  <h1>Ignite Call 🗓️📌</h1>
+  <h1>Ignite Call 📌</h1>
 
+  ![Screenshot from 2024-07-30 17-22-38](https://github.com/user-attachments/assets/68b21138-48b2-40b5-8b18-b2a60b642b58)
   Ignite Call is an app to make scheduling easier. This project was developed in the **[@Rocketseat](https://www.rocketseat.com.br/)** React - Ignite Track for study purposes and to improve my technical skills.
 </div>
 
