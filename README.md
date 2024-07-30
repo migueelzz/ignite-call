@@ -22,19 +22,17 @@
 
 ## 🔥 Usage
 
-1. Clone repository:
+1. Clone project:
    ```
    git clone https://github.com/migueelzz/ignite-call.git
-   ```
-2. Enter project:
-   ```
+
    cd ignite-call
    ```
-3. Install dependencies:
+2. Install dependencies:
    ```
    npm install
    ```
-4. Start project:
+3. Start project:
    ```
    npm run dev
    ```
