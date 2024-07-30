@@ -1,9 +1,16 @@
 import { styled, Heading, Text } from '@ignite-ui/react'
 
+export const Background = styled('div', {
+  backgroundImage: "url('/bg.svg')",
+  backgroundPosition: 'left',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'contain',
+})
+
 export const Container = styled('div', {
   maxWidth: 'calc(100vw - (100vw - 1160px) / 2)',
   marginLeft: 'auto',
-  height: '100vh',
+  height: '80vh',
   display: 'flex',
   alignItems: 'center',
   gap: '$20',
