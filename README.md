@@ -16,7 +16,7 @@
 - React Hook Form
 - Zod
 - Prisma
-- MySQL
+- PostgreSQL
 - Google API
 
 
@@ -37,6 +37,10 @@
    npm run dev
    ```
    App running in `http://localhost:3000`.
+
+## 🚀 Deploy
+
+Para subir a aplicação para produção, utilizei a Vercel, [deploy Ignite Call](https://ignite-call-seven-ruby.vercel.app/).
 
 # Author
 
