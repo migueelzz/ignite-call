@@ -22,6 +22,15 @@ export default function App({
             type: 'website',
             locale: 'pt_BR',
             url: 'https://ignite-call/',
+            images: [
+              {
+                url: '/banner.png',
+                width: 900,
+                height: 800,
+                alt: 'Ignite Call Banner',
+                type: 'image/png',
+              },
+            ],
             siteName: 'Igite Call',
           }}
         />
