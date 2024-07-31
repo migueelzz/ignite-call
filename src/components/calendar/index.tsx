@@ -187,7 +187,10 @@ export function Calendar({ selectedDate, onDateSelected }: CalendarProps) {
                         disabled={disabled}
                         isCurrentDay={isCurrentDay}
                       >
-                        {date.get('date')}
+                        <span>
+                          {String(date.get('date')).padStart(2, '0')}
+                          <div />
+                        </span>
                       </CalendarDay>
                     </td>
                   )

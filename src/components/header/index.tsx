@@ -9,13 +9,13 @@ export function Header() {
       <Link href="/">
         <Image
           src="/logo.svg"
-          width={50}
-          height={50}
+          width={40}
+          height={40}
           quality={100}
           alt="Logo Ignite"
         />
 
-        <Heading as="h1">Ignite Call</Heading>
+        <Heading>Ignite Call</Heading>
       </Link>
     </Container>
   )

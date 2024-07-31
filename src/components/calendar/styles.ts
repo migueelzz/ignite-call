@@ -77,7 +77,9 @@ export const CalendarDay = styled('button', {
   width: '100%',
   aspectRatio: '1 / 1',
   background: '$gray600',
-  textAlign: 'center',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
   cursor: 'pointer',
   borderRadius: '$sm',
 
@@ -95,10 +97,23 @@ export const CalendarDay = styled('button', {
     boxShadow: '0 0 0 2px $colors$gray100',
   },
 
+  span: {
+    position: 'relative',
+  },
+
   variants: {
     isCurrentDay: {
       true: {
-        color: '$ignite500',
+        'span > div::before': {
+          content: '',
+          position: 'absolute',
+          top: '100%',
+          left: '30%',
+          width: '6px',
+          height: '6px',
+          borderRadius: '$full',
+          background: '$gray200',
+        },
       },
       false: {},
     },
